@@ -25,9 +25,24 @@ export default {
     };
   },
   mounted() {
-    if (this.locationParts[0] === "www") {
-      this.site = "site1";
-    } else this.site = "site2";
+    const firstPart = this.locationParts[0];
+    switch (firstPart) {
+      case "www":
+        this.site = "main";
+        break;
+      case "desolate-reaches-37168":
+        this.site = "desolate";
+        break;
+      case "firma1":
+        this.site = "firma1";
+        break;
+      case "firma2":
+        this.site = "firma2";
+        break;
+      default:
+        this.site = "main";
+        break;
+    }
   },
 };
 </script>
