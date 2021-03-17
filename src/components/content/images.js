@@ -1,8 +1,8 @@
-import img from "../../assets/slide/Pictures-3.1.2019a5384bb8a58e4cfea2042d466bfe62ce.jpg";
-import img2 from "../../assets/slide/Pictures-3.1.2019fd80d78bc71740619f9c8374d0111632.jpg";
-import img3 from "../../assets/slide/Pictures-4.1.2019a05c84ab1edb49b6886e23b9fda8fb1b.jpg";
-import img4 from "../../assets/slide/Pictures-9.1.2019c4002f91d9a742ce983cac4013c86169.jpg";
-import img5 from "../../assets/slide/Pictures-9.1.20192c34825274f64c12b2a59be201ebf8ec.jpg";
+import img from "../../assets/slide/img1.jpg";
+import img2 from "../../assets/slide/img2.jpg";
+import img3 from "../../assets/slide/img3.jpg";
+import img4 from "../../assets/slide/img4.jpg";
+import img5 from "../../assets/slide/img5.jpg";
 
 import ferguson from "../../assets/menu/massey-ferguson.png";
 import agco from "../../assets/agco.png";

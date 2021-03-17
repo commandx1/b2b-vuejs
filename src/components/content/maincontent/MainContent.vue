@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container mt-2">
+      {{ site }}
       <div class="topSlide p-2 contentlayout rounded">
         <div class="row mx-0">
           <SideMenu />
@@ -26,5 +27,6 @@ import { components } from "./components";
 
 export default {
   components,
+  props: ["site"],
 };
 </script>

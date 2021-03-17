@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Content />
+    <Content :site="site" />
     <Footer />
   </div>
 </template>
@@ -17,6 +17,17 @@ export default {
     Header,
     Footer,
     Content,
+  },
+  data() {
+    return {
+      locationParts: window.location.host.split("."),
+      site: "",
+    };
+  },
+  mounted() {
+    if (this.locationParts[0] === "www") {
+      this.site = "site1";
+    } else this.site = "site2";
   },
 };
 </script>
