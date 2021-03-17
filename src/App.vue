@@ -34,7 +34,7 @@ export default {
         this.site = "desolate";
         break;
       case "firma1":
-        this.site = "firma1";
+        this.site = "firmaA";
         break;
       case "firma2":
         this.site = "firma2";
