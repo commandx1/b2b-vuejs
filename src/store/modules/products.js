@@ -23,13 +23,15 @@ const mutations = {
 };
 const actions = {
   initApp({ commit }, payload) {
-    Vue.http.get(payload.url).then((response) => {
-      console.log(response.body);
+    Vue.http
+      .get("https://desolate-reaches-37168.herokuapp.com/" + payload.url)
+      .then((response) => {
+        console.log(response.body);
 
-      const data = response.data;
+        const data = response.data;
 
-      commit("updateInitSiteData", data);
-    });
+        commit("updateInitSiteData", data);
+      });
   },
   initWebsite({ commit }, payload) {
     commit("updateWebsite", payload.site);
