@@ -9,31 +9,32 @@ import perkins from "../../assets/footerslide/perkins.jpg";
 import temel from "../../assets/footerslide/temel.jpg";
 import supsan from "../../assets/footerslide/supsan.jpg";
 
+import img1 from "../../assets/slide/img1.jpg";
+import img2 from "../../assets/slide/img2.jpg";
+import img3 from "../../assets/slide/img3.jpg";
+import img4 from "../../assets/slide/img4.jpg";
+import img5 from "../../assets/slide/img5.jpg";
+
 export const slideImages = [
   {
     id: 1,
-    img:
-      "http://www.yedpar.com.tr/upload-images/Pictures-3.1.2019a5384bb8a58e4cfea2042d466bfe62ce.jpg",
+    img: img1,
   },
   {
     id: 2,
-    img:
-      "http://www.yedpar.com.tr/upload-images/Pictures-3.1.2019fd80d78bc71740619f9c8374d0111632.jpg",
+    img: img2,
   },
   {
     id: 3,
-    img:
-      "http://www.yedpar.com.tr/upload-images/Pictures-9.1.20192c34825274f64c12b2a59be201ebf8ec.jpg",
+    img: img3,
   },
   {
     id: 4,
-    img:
-      "http://www.yedpar.com.tr/upload-images/Pictures-9.1.20199380d605a6994a7eaaec7f3f0fedfde5.jpg",
+    img: img4,
   },
   {
     id: 5,
-    img:
-      "http://www.yedpar.com.tr/upload-images/Pictures-14.06.2018acd6be1243604f879e8777b839ebb14d.png",
+    img: img5,
   },
 ];
 
