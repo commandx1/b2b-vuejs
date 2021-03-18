@@ -1,7 +1,7 @@
 <template>
   <div
     class="mt-3 opportunitywrapper"
-    v-if="getwebsite == 'main' || getwebsite == 'firma3'"
+    v-if="getwebsite == 'firma1' || getwebsite == 'firma3'"
   >
     <div class="container py-2">
       <div class="contentlayout p-2 position-relative">

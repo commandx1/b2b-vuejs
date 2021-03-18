@@ -13,7 +13,7 @@
       {{ product.title }}
     </div>
     <div class="mb-2"><span class="font-weight-bold">OEM</span> 3578965</div>
-    <div v-if="getwebsite == 'main' || getwebsite == 'firma2'">
+    <div v-if="getwebsite == 'firma1' || getwebsite == 'firma2'">
       <div class="d-flex flex-wrap align-items-end justify-content-between">
         <h4 class="newPrice">2,750 TL</h4>
         <div class="oldPrice mb-2">

@@ -3,9 +3,9 @@
     <div class="container mt-2">
       <div class="topSlide p-2 contentlayout rounded">
         <div class="row mx-0">
-          <SideMenu v-if="getwebsite !== 'main'" />
+          <SideMenu v-if="getwebsite == 'firma1'" />
           <Carousel />
-          <ProductSlide v-if="getwebsite !== 'main'" />
+          <ProductSlide v-if="getwebsite == 'firma1'" />
         </div>
       </div>
       <Slogan />
@@ -27,7 +27,6 @@ import { mapGetters } from "vuex";
 
 export default {
   components,
-  props: ["site"],
   computed: {
     ...mapGetters({
       getwebsite: "getwebsite",

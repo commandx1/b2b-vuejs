@@ -2,9 +2,10 @@
   <div
     class="position-relative"
     :class="[
-      { 'col-24': this.getwebsite == 'main' },
+      { 'col-24': this.getwebsite !== 'firma1' },
       {
-        'col-lg-12 order-3 order-lg-2 mt-2 mt-lg-0': this.getwebsite !== 'main',
+        'col-lg-12 order-3 order-lg-2 mt-2 mt-lg-0':
+          this.getwebsite == 'firma1',
       },
     ]"
   >

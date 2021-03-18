@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Content :site="site" />
+    <Content />
     <Footer />
   </div>
 </template>
@@ -22,23 +22,19 @@ export default {
   data() {
     return {
       locationParts: window.location.host.split("."),
-      site: "",
     };
   },
   created() {
     const firstPart = this.locationParts[0];
 
     switch (firstPart) {
-      // case "www":
       case "firma1":
-        this.site = "main";
         this.$store.dispatch("initApp", {
           url: "api/firma1",
         });
-        this.$store.dispatch("initWebsite", { site: "main" });
+        this.$store.dispatch("initWebsite", { site: "firma1" });
         break;
       case "firma2":
-        this.site = "firma2";
         changeColor("--b2b-red", "#3f3293");
         changeColor(
           "--b2b-layout",
@@ -50,7 +46,6 @@ export default {
         this.$store.dispatch("initWebsite", { site: "firma2" });
         break;
       case "firma3":
-        this.site = "firma3";
         changeColor("--b2b-red", "black");
         this.$store.dispatch("initApp", {
           url: "api/firma3",
@@ -58,11 +53,10 @@ export default {
         this.$store.dispatch("initWebsite", { site: "firma3" });
         break;
       default:
-        this.site = "main";
         this.$store.dispatch("initApp", {
           url: "api/firma1",
         });
-        this.$store.dispatch("initWebsite", { site: "main" });
+        this.$store.dispatch("initWebsite", { site: "firma1" });
         break;
     }
   },
