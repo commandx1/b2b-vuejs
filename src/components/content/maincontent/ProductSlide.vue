@@ -5,30 +5,32 @@
     <div class="bg-white h-100">
       <h5 class="font-weight-bold text-center title">Günün Fırsatları</h5>
       <StickerOnCorner :stickerTitle="'!'" :stickerWidth="3.5" />
-      <Slider :items="1" :responsive="{ items: 1 }">
+      <Slider :items="1" :responsive="{ items: 1 }" v-if="getsiteData.products">
         <ProductCard
           :sticker="true"
           :title="true"
-          v-for="product in products"
+          v-for="product in getsiteData.products"
           :key="product.id"
-          :imgSrc="product.src"
+          :product="product"
         />
       </Slider>
+      <Loader v-else></Loader>
     </div>
   </div>
 </template>
 
 <script>
 import ProductCard from "../../card/ProductCard";
-import { products } from "../images";
 import Slider from "../../shared/Slider.vue";
 import StickerOnCorner from "../../shared/StickerOnCorner.vue";
+import { mapGetters } from "vuex";
+import Loader from "../../shared/Loader.vue";
 export default {
-  components: { ProductCard, Slider, StickerOnCorner },
-  data() {
-    return {
-      products,
-    };
+  components: { ProductCard, Slider, StickerOnCorner, Loader },
+  computed: {
+    ...mapGetters({
+      getsiteData: "getsiteData",
+    }),
   },
 };
 </script>

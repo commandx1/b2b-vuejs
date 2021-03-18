@@ -1,3 +1,4 @@
+@import "./variables.scss";
 //RESET
 * {
   margin: 0;
@@ -51,7 +52,7 @@ body {
 }
 
 .contentlayout {
-  background-color: #f3f3f3 !important;
+  background: $b2b-layout !important;
 }
 
 @media (min-width: 1200px) {

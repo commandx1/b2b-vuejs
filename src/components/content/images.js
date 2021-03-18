@@ -1,9 +1,3 @@
-import img from "../../assets/slide/img1.jpg";
-import img2 from "../../assets/slide/img2.jpg";
-import img3 from "../../assets/slide/img3.jpg";
-import img4 from "../../assets/slide/img4.jpg";
-import img5 from "../../assets/slide/img5.jpg";
-
 import ferguson from "../../assets/menu/massey-ferguson.png";
 import agco from "../../assets/agco.png";
 import valeo from "../../assets/valeo.png";
@@ -15,33 +9,31 @@ import perkins from "../../assets/footerslide/perkins.jpg";
 import temel from "../../assets/footerslide/temel.jpg";
 import supsan from "../../assets/footerslide/supsan.jpg";
 
-import disk1 from "../../assets/fren_diski.png";
-import disk2 from "../../assets/frendiski2.png";
-import disk3 from "../../assets/frendiski3.png";
-import disk4 from "../../assets/frendiski4.png";
-
-
-
 export const slideImages = [
   {
     id: 1,
-    img: img,
+    img:
+      "http://www.yedpar.com.tr/upload-images/Pictures-3.1.2019a5384bb8a58e4cfea2042d466bfe62ce.jpg",
   },
   {
     id: 2,
-    img: img2,
+    img:
+      "http://www.yedpar.com.tr/upload-images/Pictures-3.1.2019fd80d78bc71740619f9c8374d0111632.jpg",
   },
   {
     id: 3,
-    img: img3,
+    img:
+      "http://www.yedpar.com.tr/upload-images/Pictures-9.1.20192c34825274f64c12b2a59be201ebf8ec.jpg",
   },
   {
     id: 4,
-    img: img4,
+    img:
+      "http://www.yedpar.com.tr/upload-images/Pictures-9.1.20199380d605a6994a7eaaec7f3f0fedfde5.jpg",
   },
   {
     id: 5,
-    img: img5,
+    img:
+      "http://www.yedpar.com.tr/upload-images/Pictures-14.06.2018acd6be1243604f879e8777b839ebb14d.png",
   },
 ];
 
@@ -72,7 +64,6 @@ export const reklam = [
     img: [{ id: 2000, src: valeo, width: 120, height: 50 }],
   },
 ];
-
 
 export const brands = [
   {
@@ -126,16 +117,54 @@ export const brands = [
 ];
 
 export const products = [
-  {id:1, src: disk1},
-  {id:2, src: disk2},
-  {id:3, src: disk3},
-  {id:4, src: disk4 },
-  {id:5, src: disk1},
-  {id:6, src: disk2},
-  {id:7, src: disk3},
-  {id:8, src: disk4 },
-  {id:9, src: disk1},
-  {id:10, src: disk2}
-]
-
-
+  {
+    id: 1,
+    src:
+      "https://www.tarimdan.com/image/ilan/massey-ferguson-240-285-255-fren-disk-bronzu-yagli-1860964_58885912c67ca.jpg",
+  },
+  {
+    id: 2,
+    src:
+      "https://ilhantraktor.com/image/cache/catalog/ferguson/fren%20disk-500x500.png",
+  },
+  {
+    id: 3,
+    src:
+      "https://www.tarimdan.com/image/ilan/massey-ferguson-240-285-255-fren-disk-saci-1860965_588856dbcae47.jpg",
+  },
+  {
+    id: 4,
+    src:
+      "https://www.tarimdan.com/image/ilan/massey-ferguson-135-240-fren-tablasi-komple-276-1-827143_58885089da0db.jpg",
+  },
+  {
+    id: 5,
+    src:
+      "https://www.tarimdan.com/image/ilan/massey-ferguson-240-285-255-fren-disk-bronzu-yagli-1860964_58885912c67ca.jpg",
+  },
+  {
+    id: 6,
+    src:
+      "https://ilhantraktor.com/image/cache/catalog/ferguson/fren%20disk-500x500.png",
+  },
+  {
+    id: 7,
+    src:
+      "https://www.tarimdan.com/image/ilan/massey-ferguson-240-285-255-fren-disk-saci-1860965_588856dbcae47.jpg",
+  },
+  {
+    id: 8,
+    src:
+      "https://www.tarimdan.com/image/ilan/massey-ferguson-135-240-fren-tablasi-komple-276-1-827143_58885089da0db.jpg",
+  },
+  {
+    id: 9,
+    src:
+      "https://www.tarimdan.com/image/ilan/massey-ferguson-240-285-255-fren-disk-bronzu-yagli-1860964_58885912c67ca.jpg",
+  },
+  {
+    id: 10,
+    src:
+      "https://ilhantraktor.com/image/cache/catalog/ferguson/fren%20disk-500x500.png",
+  },
+];

@@ -1,13 +1,14 @@
 <template>
   <div class="contentlayout productsOnSale mt-3 p-2 position-relative">
     <ContentTitle :title="'Yeni Ürünler'" />
-    <Slider>
+    <Slider v-if="getsiteData.products">
       <ProductCard
-        v-for="product in products"
+        v-for="product in getsiteData.products"
         :key="product.id"
-        :imgSrc="product.src"
+        :product="product"
       />
     </Slider>
+    <Loader v-else />
     <StickerOnCorner
       :stickerWidth="3"
       :customStyle="{
@@ -27,17 +28,25 @@ import ContentTitle from "../shared/ContentTitle";
 import ProductCard from "../card/ProductCard";
 import { products } from "./images";
 import Slider from "../shared/Slider.vue";
+import Loader from "../shared/Loader";
+import { mapGetters } from "vuex";
 export default {
   components: {
     StickerOnCorner,
     ProductCard,
     ContentTitle,
+    Loader,
     Slider,
   },
   data() {
     return {
       products,
     };
+  },
+  computed: {
+    ...mapGetters({
+      getsiteData: "getsiteData",
+    }),
   },
 };
 </script>

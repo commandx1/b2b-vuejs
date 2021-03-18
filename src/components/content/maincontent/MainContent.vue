@@ -1,12 +1,11 @@
 <template>
   <div>
     <div class="container mt-2">
-      {{ site }}
       <div class="topSlide p-2 contentlayout rounded">
         <div class="row mx-0">
-          <SideMenu />
+          <SideMenu v-if="getwebsite !== 'main'" />
           <Carousel />
-          <ProductSlide />
+          <ProductSlide v-if="getwebsite !== 'main'" />
         </div>
       </div>
       <Slogan />
@@ -24,9 +23,15 @@
 
 <script>
 import { components } from "./components";
+import { mapGetters } from "vuex";
 
 export default {
   components,
   props: ["site"],
+  computed: {
+    ...mapGetters({
+      getwebsite: "getwebsite",
+    }),
+  },
 };
 </script>

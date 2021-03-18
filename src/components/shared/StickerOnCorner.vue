@@ -34,9 +34,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../variables.scss";
+
 .position-absolute.important {
   clip-path: polygon(0 0, 0% 100%, 100% 0);
-  background: red;
+  background: $b2b-red;
   top: 0.5rem;
   left: 0.75rem;
   color: white;

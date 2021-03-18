@@ -1,16 +1,24 @@
 <template>
-  <div class="mt-3 opportunitywrapper">
+  <div
+    class="mt-3 opportunitywrapper"
+    v-if="getwebsite == 'main' || getwebsite == 'firma3'"
+  >
     <div class="container py-2">
       <div class="contentlayout p-2 position-relative">
         <ContentTitle :title="'Fırsat Ürünleri'" />
-        <Slider :margin="30" :items="1" :responsive="{ items: 1 }">
+        <Slider
+          :margin="30"
+          :items="1"
+          :responsive="{ items: 1 }"
+          v-if="getsiteData.products"
+        >
           <div
             class="row h-100"
             v-for="(product, i) in products"
             :key="product.id"
           >
             <div class="col-lg-12 p-1 mb-2 mb-lg-0" v-if="product.length > 2">
-              <ProductCard :bigCard="true" :imgSrc="product[0].src" />
+              <ProductCard :bigCard="true" :product="product[0]" />
             </div>
             <div
               class="px-1"
@@ -30,12 +38,13 @@
                   v-for="p in product.length < 3 ? product : product.slice(1)"
                   :key="p.id"
                 >
-                  <ProductCard :imgSrc="p.src" />
+                  <ProductCard :product="p" />
                 </div>
               </div>
             </div>
           </div>
         </Slider>
+        <Loader v-else></Loader>
         <StickerOnCorner :stickerWidth="2.5" :stickerTitle="'!'" />
       </div>
     </div>
@@ -46,20 +55,27 @@
 import StickerOnCorner from "../shared/StickerOnCorner";
 import ContentTitle from "../shared/ContentTitle";
 import ProductCard from "../card/ProductCard";
-import { products } from "./images";
+import { mapGetters } from "vuex";
 import Slider from "../shared/Slider";
+import Loader from "../shared/Loader.vue";
+
 export default {
-  components: { StickerOnCorner, ContentTitle, ProductCard, Slider },
+  components: { StickerOnCorner, ContentTitle, ProductCard, Slider, Loader },
   data() {
     return {
       products: [],
     };
   },
-  beforeMount() {
-    for (let i = 0; i < products.length; i += 5) {
-      const test1 = products.slice(i, i + 5);
-      this.products.push(test1);
-    }
+  watch: {
+    getsiteData() {
+      for (let i = 0; i < this.getsiteData.products.length; i += 5) {
+        const test1 = this.getsiteData.products.slice(i, i + 5);
+        this.products.push(test1);
+      }
+    },
+  },
+  computed: {
+    ...mapGetters({ getsiteData: "getsiteData", getwebsite: "getwebsite" }),
   },
 };
 </script>

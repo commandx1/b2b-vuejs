@@ -3,27 +3,36 @@
     :class="{ bigCard }"
     class="productcard bg-white h-100 rounded d-flex flex-column justify-content-between"
   >
-    <div class="imageBox w-100 h-50 border flex-center p-4 mb-2">
-      <img :src="imgSrc" class="w-100 h-100" />
+    <div
+      class="imageBox w-100 border flex-center p-4 mb-2"
+      :style="{ height: bigCard ? '300px' : '150px' }"
+    >
+      <img :src="product.src" class="w-100 h-100" />
     </div>
-    <div class="producttitle font-weight-bolder mb-2">MF 240 Fren Diski</div>
+    <div class="producttitle font-weight-bolder mb-2">
+      {{ product.title }}
+    </div>
     <div class="mb-2"><span class="font-weight-bold">OEM</span> 3578965</div>
-    <div class="d-flex flex-wrap align-items-end justify-content-between">
-      <h4 class="newPrice">2,750 TL</h4>
-      <div class="oldPrice mb-2">
-        <div class="inner">3,000 TL</div>
+    <div v-if="getwebsite == 'main' || getwebsite == 'firma2'">
+      <div class="d-flex flex-wrap align-items-end justify-content-between">
+        <h4 class="newPrice">2,750 TL</h4>
+        <div class="oldPrice mb-2">
+          <div class="inner">3,000 TL</div>
+        </div>
       </div>
+      <button class="d-flex align-items-center w-100">
+        <div class="img d-sm-none d-lg-block">
+          <i class="fas fa-tractor"></i>
+        </div>
+        <div class="text">Sepete Ekle</div>
+      </button>
     </div>
-    <button class="d-flex align-items-center w-100">
-      <div class="img d-sm-none d-lg-block">
-        <i class="fas fa-tractor"></i>
-      </div>
-      <div class="text">Sepete Ekle</div>
-    </button>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   props: [
     "sticker",
@@ -32,7 +41,13 @@ export default {
     "stickerWidth",
     "bigCard",
     "imgSrc",
+    "product",
   ],
+  computed: {
+    ...mapGetters({
+      getwebsite: "getwebsite",
+    }),
+  },
 };
 </script>
 

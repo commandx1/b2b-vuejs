@@ -1,5 +1,13 @@
 <template>
-  <div class="col-lg-12 order-3 order-lg-2 position-relative mt-2 mt-lg-0">
+  <div
+    class="position-relative"
+    :class="[
+      { 'col-24': this.getwebsite == 'main' },
+      {
+        'col-lg-12 order-3 order-lg-2 mt-2 mt-lg-0': this.getwebsite !== 'main',
+      },
+    ]"
+  >
     <div class="p-2 bg-white rounded h-100">
       <Carousel
         class="h-100"
@@ -19,7 +27,6 @@
         />
       </Carousel>
     </div>
-
     <div class="position-absolute owl-squares d-flex">
       <div
         v-for="(sq, i) in squares"
@@ -35,6 +42,7 @@
 <script>
 import Carousel from "vue-owl-carousel";
 import { slideImages } from "../images";
+import { mapGetters } from "vuex";
 import $ from "jquery";
 
 export default {
@@ -66,6 +74,11 @@ export default {
         }
       });
     },
+  },
+  computed: {
+    ...mapGetters({
+      getwebsite: "getwebsite",
+    }),
   },
 };
 </script>
